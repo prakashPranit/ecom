@@ -6,6 +6,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 import { ModalProvider } from '@/providers/modal-provider'
 import prismadb from '@/lib/prismadb'
+import { ToasterProvier } from '@/providers/toast-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   const store = prismadb.store
   return (
     <html lang="en"> <ClerkProvider> 
+      <ToasterProvier/>
       <ModalProvider/>
       <body className={inter.className}>{children}</body>
     </ClerkProvider>
