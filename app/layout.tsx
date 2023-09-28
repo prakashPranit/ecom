@@ -24,7 +24,7 @@ export default function RootLayout({
   const store = prismadb.store
   return (
     <html lang="en"> <ClerkProvider> 
-      <ToasterProvier/>
+  <ToasterProvier></ToasterProvier>
       <ModalProvider/>
       <body className={inter.className}>{children}</body>
     </ClerkProvider>
